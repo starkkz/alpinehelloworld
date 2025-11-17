@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage('Build Docker') {
       steps {
-        sh 'docker build -t myregistry/myapp:${BUILD_NUMBER} .'
-        sh 'docker push myregistry/myapp:${BUILD_NUMBER}'
+        sh 'docker build -t dy05/alpinehelloworld:${BUILD_NUMBER} .'
+        sh 'docker push dy05/alpinehelloworld:${BUILD_NUMBER}'
       }
     }
     stage('Deploy to K8s') {
